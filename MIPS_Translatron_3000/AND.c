@@ -67,10 +67,10 @@ void and_reg_assm(void) {
 	setBits_str(5, "100100");
 
 	// set Rd
-	setBits_num(25, PARAM1.value, 5); // [CHANGE] PARAM1 should start at 15 (previously was 25)
+	setBits_num(15, PARAM1.value, 5); // [CHANGE] PARAM1 should start at 15 (previously was 25)
 
 	// set Rs
-	setBits_num(15, PARAM2.value, 5); // [CHANGE] PARAM2 should start at 25 (previously was 15)
+	setBits_num(25, PARAM2.value, 5); // [CHANGE] PARAM2 should start at 25 (previously was 15)
 
 	// set Rt
 	setBits_num(20, PARAM3.value, 5);
