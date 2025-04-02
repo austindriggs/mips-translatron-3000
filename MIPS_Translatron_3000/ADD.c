@@ -7,6 +7,8 @@
 
 // NOTE: golden standard code
 
+// [REVIEW] reviewed for commit history: gold standard
+
 #include "Instruction.h"
 
 void add_reg_assm(void) {
@@ -69,7 +71,7 @@ void add_reg_assm(void) {
 	// Set the opcode
 	setBits_num(31, 0, 6);
 
-	// Set the funct 
+	// Set the funct
 	setBits_str(5, "100000");
 
 	// set Rd

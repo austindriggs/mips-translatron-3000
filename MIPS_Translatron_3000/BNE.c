@@ -5,7 +5,9 @@
 * MIPS-Translatron 3000
 */
 
-// NOTE: golden standard code
+// NOTE: golden standard code 
+
+// [REVIEW] reviewed for commit history: gold standard
 
 #include "Instruction.h"
 

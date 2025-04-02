@@ -7,6 +7,8 @@
 
 // NOTE: golden standard code
 
+// [REVIEW] reviewed for commit history: gold standard
+
 #include "Instruction.h"
 
 void addi_immd_assm(void) {
