@@ -1,5 +1,7 @@
 #include "Instruction.h"
 
+// [REVIEW] Fixed function to be "010000" instead of the MFLO "010010"
+
 void mfhi_reg_assm(void) {
 	if (strcmp(OP_CODE, "MFHI") != 0) {
 
@@ -30,16 +32,20 @@ void mfhi_reg_assm(void) {
 	/*
 	Putting the binary together
 	*/
+
 	// Set the opcode
 	setBits_str(31, "000000");
+
 	// set rd
 	setBits_num(15, PARAM1.value, 5);
 
 	// Set the funct 
-	setBits_str(5, "010010");
+	setBits_str(5, "010000"); // [CHANGE] Corrected, used to be for MFLO 010010
+
 	// set 25-16 as 0s 
 	setBits_str(21, "000000");
 	setBits_str(25, "000000");
+
 	// set 10-6 as 0s 
 	setBits_str(10, "00000");
 
@@ -52,7 +58,8 @@ void mfhi_reg_bin(void) {
 	// check_bits(start_bit, bit_string) returns 0 if the bit_string matches
 	//  any x will be skipped
 	// If the manual shows (0), then the value of that bit doesnt matter
-	if (checkBits(31, "000000") != 0 || checkBits(5, "010010") != 0 || checkBits(25, "0000000000") != 0 || checkBits(10, "00000") != 0) {
+	// [CHANGE] Corrected, used to be for MFLO 010010
+	if (checkBits(31, "000000") != 0 || checkBits(5, "010000") != 0 || checkBits(25, "0000000000") != 0 || checkBits(10, "00000") != 0) {
 		state = WRONG_COMMAND;
 		return;
 	}

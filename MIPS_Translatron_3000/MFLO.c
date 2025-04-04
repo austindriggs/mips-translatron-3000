@@ -1,5 +1,7 @@
 #include "Instruction.h"
 
+// [REVIEW] Nate fixed MFLO
+
 void mflo_reg_assm(void) {
 
 	if (strcmp(OP_CODE, "MFLO") != 0) {
@@ -37,7 +39,7 @@ void mflo_reg_assm(void) {
 	setBits_num(15, PARAM1.value, 5);
 
 	// Set the funct 
-	setBits_str(5, "010000");
+	setBits_str(5, "010010");   // funct was changed from 010000 to 010010
 	// set 25-16 as 0s 
 	setBits_str(10, "000000");
 
@@ -53,7 +55,8 @@ void mflo_reg_bin(void) {
 	// check_bits(start_bit, bit_string) returns 0 if the bit_string matches
 	//  any x will be skipped
 	// If the manual shows (0), then the value of that bit doesnt matter
-	if (checkBits(31, "000000") != 0 || checkBits(5, "010000") != 0 || checkBits(25, "0000000000") != 0 || checkBits(10, "00000") != 0) {
+	// In the if statement below, checkBits was changed form 010000 to 010010
+	if (checkBits(31, "000000") != 0 || checkBits(5, "010010") != 0 || checkBits(25, "0000000000") != 0 || checkBits(10, "00000") != 0) {
 		state = WRONG_COMMAND;
 		return;
 	}
@@ -78,5 +81,3 @@ void mflo_reg_bin(void) {
 	state = COMPLETE_DECODE;
 	
 }
-
-
