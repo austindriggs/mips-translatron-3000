@@ -8,30 +8,49 @@
 #include "Instruction.h"
 
 void div_reg_assm(void) {
+	// Checking that the op code matches
+	// strcmp(string1, string2) return 0 if they match
 	if (strcmp(OP_CODE, "DIV") != 0) {
 		state = WRONG_COMMAND;
 		return;
 	}
 
-	// check par
+	/*
+		Checking the type of parameters
+	*/
+
+	// param 1 should be a register
 	if (PARAM1.type != REGISTER) {
 		state = MISSING_REG;
 		return;
 	}
+
+	// param 2 should be a register
 	if (PARAM2.type != REGISTER) {
 		state = MISSING_REG;
 		return;
 	}
+
+	/*
+		Checking the value of parameters
+	*/
+
+	// Rd should be 31 or less
 	if (PARAM1.value > 31) {
 		state = INVALID_REG;
 		return;
 	}
+
+	// Rs should be 31 or less
 	if (PARAM2.value > 31) {
 		state = INVALID_REG;
 		return;
 	}
 
-	// create binary
+	/*
+		Putting the binary together
+	*/
+
 	setBits_str(31, "000000");
 	setBits_num(20, PARAM1.value, 5);
 	setBits_num(25, PARAM2.value, 5);
