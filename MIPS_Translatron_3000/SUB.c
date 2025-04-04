@@ -5,7 +5,7 @@
 * MIPS-Translatron 3000
 */
 
-// [REVIEW] Changed op code in binary and SUB works
+// [REVIEW] SUB works; Changed function in binary
 
 #include "Instruction.h"
 
