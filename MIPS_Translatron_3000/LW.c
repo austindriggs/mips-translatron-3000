@@ -1,5 +1,7 @@
 #include "Instruction.h"
 
+// [REVIEW] Corrected PARAM2.value > 0xFFFF
+
 void lw_immd_assm(void) {
 	if (strcmp(OP_CODE, "LW") != 0) {
 
@@ -34,7 +36,7 @@ void lw_immd_assm(void) {
 		return;
 	}
 	//register 2 
-	if ( PARAM2.value > 0x7FFF) {
+	if ( PARAM2.value > 0xFFFF) { // [CHANGE] changed from 0x7FFF
 		state = INVALID_IMMED;
 		return;
 	}
