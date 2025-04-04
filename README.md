@@ -18,3 +18,13 @@ After changing files, you need to recompile:
 ```bash
 gcc ADD.c ADDI.c AND.c ANDI.c BEQ.c BNE.c DIV.c LUI.c LW.c MFHI.c MFLO.c MIPS_Instruction.c MIPS_Interpreter.c MULT.c OR.c ORI.c SLT.c SLTI.c SUB.c SW.c -o MIPS_Interpreter.exe
 ```
+
+When running immediate functions, use a `#`:
+```arm-asm
+ADDI $t0, $t1, #15
+```
+
+and when you convert back from binary to assembly it will give the immediate value as a hex number:
+```arm-asm
+ADDI $t0, $t1, #0xF
+```
