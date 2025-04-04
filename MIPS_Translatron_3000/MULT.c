@@ -43,8 +43,8 @@ void mult_reg_assm(void) {
         Putting the binary together
     */
 
-    // Set the opcode (R-type, so 000000)
-    setBits_num(31, 0, 6);
+    // Set the opcode
+    setBits_str(31, "000100"); // [CHANGE] Changed OP Code to be 000100 instead of 000000
 
     // Set Rs
     setBits_num(25, PARAM1.value, 5);
