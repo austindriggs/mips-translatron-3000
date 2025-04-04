@@ -1,5 +1,7 @@
 #include "Instruction.h"
 
+// [REVIEW] MULT works now
+
 void mult_reg_assm(void) {
     // Checking that the opcode matches
     if (strcmp(OP_CODE, "MULT") != 0) {
