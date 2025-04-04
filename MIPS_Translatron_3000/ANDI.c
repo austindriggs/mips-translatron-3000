@@ -1,5 +1,7 @@
 #include "Instruction.h"
 
+// [REVIEW] ANDI works; just added comments
+
 void andi_immd_assm(void) {
 
 	// [ADD] Checking that the op code matches (previously had no comment)
