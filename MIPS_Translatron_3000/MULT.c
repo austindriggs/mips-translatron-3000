@@ -57,9 +57,9 @@ void mult_reg_assm(void) {
     // Set function code (MULT = 011000)
     setBits_str(5, "011000");
 
-    // Unused fields for Rd, shamt should be zero
-    setBits_num(15, 0, 5);  // Rd field (not used)
-    setBits_num(10, 0, 5);  // shamt (always zero)
+    // Unused fields should be zero
+    setBits_num(15, 0, 5);
+    setBits_num(10, 0, 5);
 
     // Tell the system the encoding is done
     state = COMPLETE_ENCODE;

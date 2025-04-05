@@ -51,17 +51,27 @@ void div_reg_assm(void) {
 		Putting the binary together
 	*/
 
-	setBits_str(31, "000000");
-	setBits_num(20, PARAM1.value, 5);
-	setBits_num(25, PARAM2.value, 5);
-	setBits_str(5, "011010");
-	setBits_num(15, 0, 10);
+    // Set the opcode
+    setBits_str(31, "000100");
+
+    // Set Rs
+    setBits_num(25, PARAM1.value, 5);
+
+    // Set Rt
+    setBits_num(20, PARAM2.value, 5);
+
+    // Set function code 
+    setBits_str(5, "011010");
+
+    // Unused fields should be zero
+    setBits_num(15, 0, 5);
+    setBits_num(10, 0, 5);
 	
 	state = COMPLETE_ENCODE;
 }
 
 void div_reg_bin(void) {
-	if (checkBits(31, "000000") != 0 || checkBits(5, "011010") != 0) {
+	if (checkBits(31, "000100") != 0 || checkBits(5, "011010") != 0) {
 		state = WRONG_COMMAND;
 		return;
 	}
@@ -71,8 +81,8 @@ void div_reg_bin(void) {
 	uint32_t Rt = getBits(20, 5);
 
 	setOp("DIV");
-	setParam(2, REGISTER, Rs);
-	setParam(1, REGISTER, Rt);
+	setParam(1, REGISTER, Rs); // [CHANGE] Reordered parameters
+	setParam(2, REGISTER, Rt);
 
 	state = COMPLETE_DECODE;
 }
