@@ -5,6 +5,7 @@
 * MIPS-Translatron 3000
 */
 
+// [REVIEW] LUI works; need to comment
 
 #include "Instruction.h"
 
