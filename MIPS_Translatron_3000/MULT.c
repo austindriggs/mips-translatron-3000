@@ -1,9 +1,19 @@
+/*
+* Author: Ohm Squad
+* Date: 2025-04-02
+* ByteForge Systems
+* MIPS-Translatron 3000
+*/
+
+// Header Files
 #include "Instruction.h"
 
-// [REVIEW] MULT works now
+/*
+    ASSEMBLY TO BINARY FUNCTION
+*/
 
 void mult_reg_assm(void) {
-    // Checking that the opcode matches
+    // Checking that the opcode matches this function
     if (strcmp(OP_CODE, "MULT") != 0) {
         state = WRONG_COMMAND;
         return;
@@ -46,7 +56,7 @@ void mult_reg_assm(void) {
     */
 
     // Set the opcode
-    setBits_str(31, "000100"); // [CHANGE] Changed OP Code to be 000100 instead of 000000
+    setBits_str(31, "000100");
 
     // Set Rs
     setBits_num(25, PARAM1.value, 5);
@@ -54,10 +64,10 @@ void mult_reg_assm(void) {
     // Set Rt
     setBits_num(20, PARAM2.value, 5);
 
-    // Set function code (MULT = 011000)
+    // Set function code
     setBits_str(5, "011000");
 
-    // Unused fields should be zero
+    // Unused fields should be zeroed out
     setBits_num(15, 0, 5);
     setBits_num(10, 0, 5);
 
@@ -65,8 +75,12 @@ void mult_reg_assm(void) {
     state = COMPLETE_ENCODE;
 }
 
+/*
+    BINARY TO ASSEMBLY FUNCTION
+*/
+
 void mult_reg_bin(void) {
-    // If the opcode doesn't match, this isn't the correct command
+    // If the opcodes don't match, this isn't the correct command
     if (checkBits(31, "000100") != 0 || checkBits(5, "011000") != 0) {
         state = WRONG_COMMAND;
         return;
@@ -87,9 +101,10 @@ void mult_reg_bin(void) {
     // Set the opcode
     setOp("MULT");
 
-    // Set the parameters (source registers)
+    // Set the parameters / registers
     setParam(1, REGISTER, Rs);
     setParam(2, REGISTER, Rt);
 
+    // Tell the system the encoding is done
     state = COMPLETE_DECODE;
 }
