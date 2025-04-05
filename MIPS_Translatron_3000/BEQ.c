@@ -7,7 +7,6 @@
 
 // [REVIEW] BEQ works; corrected opcode to "000100" and parameter order
 
-
 #include "Instruction.h"
 
 void beq_immd_assm(void) {
