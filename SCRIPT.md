@@ -13,6 +13,8 @@ TODO
 
 ## MIPS Translatron 3000
 
+For this part of the video, we are going to look at the MULT.c implementation.
+
 ### DEBUGGING PROCESS
 
 TODO
