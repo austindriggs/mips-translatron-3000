@@ -1,5 +1,7 @@
 #include "Instruction.h"
 
+// [REVIEW] OR looks good already
+
 void or_reg_assm(void) {
 	if (strcmp(OP_CODE, "OR") != 0) {
 		state = WRONG_COMMAND;
