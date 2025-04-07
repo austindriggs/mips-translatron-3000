@@ -59,6 +59,8 @@ ADDI $t0, $t1, #0xF
 
 For some references and documentation, see the `docs` folder.
 
+Note that the "MIPSzy instruction summary" from section 3.9 incorrectly states that MULT starts with `000100`, but it is actually `000000`.
+
 
 ## CONTACTS
 
