@@ -1,12 +1,11 @@
 /*
-* Author: Ol' Jim
-* Date: 06/13/2012
+* Author: Ohm Squad
+* Date: 2025-04-02
 * ByteForge Systems
 * MIPS-Translatron 3000
 */
 
-// [REVIEW] BEQ works; corrected opcode to "000100" and parameter order
-
+// Header Files
 #include "Instruction.h"
 
 void beq_immd_assm(void) {

@@ -1,3 +1,11 @@
+/*
+* Author: Ohm Squad
+* Date: 2025-04-02
+* ByteForge Systems
+* MIPS-Translatron 3000
+*/
+
+// Header Files
 #include "Instruction.h"
 
 // [REVIEW] Fixed function to be "010000" instead of the MFLO "010010"
