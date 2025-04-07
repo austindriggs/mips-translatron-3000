@@ -56,7 +56,7 @@ void mult_reg_assm(void) {
     */
 
     // Set the opcode
-    setBits_str(31, "000100");
+    setBits_str(31, "000000");
 
     // Set Rs
     setBits_num(25, PARAM1.value, 5);
@@ -81,7 +81,7 @@ void mult_reg_assm(void) {
 
 void mult_reg_bin(void) {
     // If the opcodes don't match, this isn't the correct command
-    if (checkBits(31, "000100") != 0 || checkBits(5, "011000") != 0) {
+    if (checkBits(31, "000000") != 0 || checkBits(5, "011000") != 0) {
         state = WRONG_COMMAND;
         return;
     }
