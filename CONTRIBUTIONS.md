@@ -20,7 +20,9 @@ Contributers:
 Machine code where the corrected bits are highlighted, as well as the recompiled assembly code from running the fixed machine code through your disassembler from Deliverable 1. Compile all this information and figures in a single document (follow lab report style, this document should be readable).
 
 Contributers:
-1. TODO
+1. Austin Driggs
+2. Nate Kirby
+3. Tucker Wilson
 
 
 ## Deliverable 3 (4%): 
@@ -28,4 +30,6 @@ Contributers:
 Create a 3-5 min video and presentation explaining your bug fixes, documentation process, debugging process, highlighting how you identified bugs, and bit flips in the corrupted machine code demonstrating how your assembler/disassembler successfully converts the corrected instructions.
 
 Contributers:
-1. TODO
+1. Austin Driggs
+2. Nate Kirby
+3. Tucker Wilson
