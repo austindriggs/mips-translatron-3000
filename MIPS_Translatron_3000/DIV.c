@@ -1,10 +1,11 @@
 /*
-* Author: Ol' Jim
-* Date: 06/13/2012
+* Author: Ohm Squad
+* Date: 2025-04-02
 * ByteForge Systems
 * MIPS-Translatron 3000
 */
 
+// Header Files
 #include "Instruction.h"
 
 void div_reg_assm(void) {
@@ -52,7 +53,7 @@ void div_reg_assm(void) {
 	*/
 
     // Set the opcode
-    setBits_str(31, "000100");
+    setBits_str(31, "000000");
 
     // Set Rs
     setBits_num(25, PARAM1.value, 5);
@@ -71,7 +72,7 @@ void div_reg_assm(void) {
 }
 
 void div_reg_bin(void) {
-	if (checkBits(31, "000100") != 0 || checkBits(5, "011010") != 0) {
+	if (checkBits(31, "000000") != 0 || checkBits(5, "011010") != 0) {
 		state = WRONG_COMMAND;
 		return;
 	}
