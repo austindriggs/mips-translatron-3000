@@ -1,6 +1,6 @@
 #include "Instruction.h"
 
-// [REVIEW] Nate fixed MFLO
+// [CHANGE] corrected setbits in MFLO
 
 void mflo_reg_assm(void) {
 
@@ -41,7 +41,7 @@ void mflo_reg_assm(void) {
 	// Set the funct 
 	setBits_str(5, "010010");   // funct was changed from 010000 to 010010
 	// set 25-16 as 0s 
-	setBits_str(10, "000000");
+	setBits_str(25, "0000000000");
 
 	// set 10-6 as 0s 
 	setBits_str(10, "00000");
