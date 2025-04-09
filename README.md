@@ -3,10 +3,14 @@
 CPE310 Project  
 Spring 2025  
 
+## REPORTS
+
+Reports can be found in the `./reports` directory.
+
 
 ## CONTRIBUTING
 
-See `CONTRIBUTIONS.md` for who did what (requirement for the project).
+See `CONTRIBUTIONS.md` for who did what (delivarable for the project as stated by the prompt).
 
 
 ### COMMENTING
