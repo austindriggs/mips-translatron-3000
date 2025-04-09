@@ -6,7 +6,7 @@ Spring 2025
 
 ## CONTRIBUTING
 
-See `CONTRIBUTIONS.md` for who did what.
+See `CONTRIBUTIONS.md` for who did what (requirement for the project).
 
 
 ### COMMENTING
