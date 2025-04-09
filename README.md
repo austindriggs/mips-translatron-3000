@@ -73,4 +73,4 @@ The Ohm Squad:
 
 ## AI DISCLOSURE
 
-AI was used when **generating comments only**, it was not used for code generation, corrections, or formatting.
+AI was used when **generating comments only**, it was not used for code generation, corrections, formatting, or anything else.
