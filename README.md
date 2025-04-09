@@ -82,4 +82,4 @@ The Ohm Squad:
 
 AI was used when **generating comments only**, it was not used for code generation, corrections, formatting, or anything else.
 
-We fully commented a few functions and then gave them to ChatGPT, along with the "gold standard"functions, to reference when it generated comments for a lot of the other functions.
+We fully commented a few functions and then gave them to ChatGPT, along with the "gold standard" functions, to reference when it generated comments for a lot of the other functions.
