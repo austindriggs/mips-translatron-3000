@@ -57,6 +57,10 @@ and when you convert back from binary to assembly it will give the immediate val
 ADDI $t0, $t1, #0xF
 ```
 
+### TESTING
+
+While we didn't automate the testing, we did retest every function at the end of the project, with the results being shown in `TESTING.md`.
+
 
 ## REFERENCES
 
