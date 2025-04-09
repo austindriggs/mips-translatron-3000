@@ -12,6 +12,7 @@
 
 void mflo_reg_assm(void) {
 
+	// check if its MFLO
 	if (strcmp(OP_CODE, "MFLO") != 0) {
 
 		state = WRONG_COMMAND;
@@ -32,6 +33,7 @@ void mflo_reg_assm(void) {
 	/*
 		Checking the value of parameters
 	*/
+
 	// Rd should be 31 or less
 	if (PARAM1.value > 31) {
 		state = INVALID_REG;
@@ -41,6 +43,7 @@ void mflo_reg_assm(void) {
 	/*
 	Putting the binary together
 	*/
+
 	// Set the opcode
 	setBits_str(31, "000000");
 	// set rd

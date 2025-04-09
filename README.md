@@ -18,7 +18,7 @@ When implementing a function, to the top of the file, add:
 */
 ```
 
-When contributing, add a comment in the form:
+When contributing, if relevant, add a comment in the form:
 ```c
 // [WHAT] why (previous)
 ```
@@ -59,7 +59,7 @@ ADDI $t0, $t1, #0xF
 
 For some references and documentation, see the `docs` folder.
 
-Note that the "MIPSzy instruction summary" from section 3.9 incorrectly states that MULT starts with `000100`, but it is actually `000000`.
+Note that the "MIPSzy instruction summary" from section 3.9 incorrectly states that MULT starts with `000100`, but it is actually `000000`, as it is a register type (r-type) opcode.
 
 
 ## CONTACTS
@@ -69,3 +69,8 @@ The Ohm Squad:
 - Nate Kirby (nwk00004@mix.wvu.edu)
 - Tucker Wilson (trw00007@mix.wvu.edu)
 - Ava Milano (avm00006@mix.wvu.edu)
+
+
+## AI DISCLOSURE
+
+AI was used when **generating comments only**, it was not used for code generation, corrections, or formatting.

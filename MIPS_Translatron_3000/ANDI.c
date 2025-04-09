@@ -8,8 +8,6 @@
 // Header Files
 #include "Instruction.h"
 
-// [REVIEW] ANDI works; just added comments
-
 void andi_immd_assm(void) {
 
 	// [ADD] Checking that the op code matches (previously had no comment)
@@ -100,6 +98,3 @@ void andi_immd_bin(void) {
 	// [ADD] tell the system the encoding is done (previously had no comment)
 	state = COMPLETE_DECODE;
 }
-
-
-
