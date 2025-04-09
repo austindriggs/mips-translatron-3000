@@ -6,6 +6,9 @@ Spring 2025
 
 ## CONTRIBUTING
 
+See `CONTRIBUTIONS.md` for who did what.
+
+
 ### COMMENTING
 
 When implementing a function, to the top of the file, add:
